@@ -6,6 +6,13 @@ const __ageConst = "Age";
 
 class Person{
 
+  constructor(firstName,middleName,lastName,age){
+    this.FirstName = firstName;
+    this.MiddleName = middleName;
+    this.LastName = lastName;
+    this.Age = age;
+  }
+
  set [__firstNameConst] (value){
    this._firstName = value;
  }
@@ -29,8 +36,16 @@ class Person{
  get [__ageConst] () { return this._age; }
 
  get FullName(){
-   return [FirstName , MiddleName , LastName ].join( ); 
+   return [this.FirstName, this.MiddleName, this.LastName ].join(" ");
  }
 
+};
 
-}
+let person  = new Person();
+person.FirstName = "Ajeesh";
+person.MiddleName = "Balan";
+person.LastName = "Nair";
+person.Age = 35;
+// let person  = new Person("Ajeesh","Balan","Nair",35);
+
+console.log(person.FullName);
