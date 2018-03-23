@@ -27,8 +27,10 @@ class Person{
  set [__ageConst] (value) { this._age = value; }
 
  get [__ageConst] () { return this._age; }
- 
 
+ get FullName(){
+   return [FirstName , MiddleName , LastName ].join( ); 
+ }
 
 
 }
